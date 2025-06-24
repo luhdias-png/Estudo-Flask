@@ -11,8 +11,14 @@
         
     </div>
     <div>
-        <p>Vamos de aula de Flask</p><br>
-        <p>vamo mudar todos os roles</p>
+        <p>Vamos de aula de Flask {{context.usuario}}</p><br>
+        <p>Idade: {{context.idade}}</p>
+        <p>mentira</p>
+        <p>vamo mudar todos os roles</p><br>
+        <a href="{{url_for('cadastro')}}"> Cadastro </a>
+<!--Aqui colocamos a funcao de Flask em python chamada "url_for" ela chama a funcao na views com o nome da funcao mudando o nome apenas..
+do link (/contato)-->
+
     </div>
 </body>
 </html>
