@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+            <div class="row">
+                <h3>Enviando contato</h3>
+            </div>
+
+            <form action="" method="post" class="row mt-4">
+                {{ form.csrf_token }}
+
+                {{ form.nome.label() }}
+                {{ form.nome(class_="form-control", placeholder="Digite seu nome") }}
+
+                {{ form.email.label() }}
+                {{ form.email(class="form-control", placeholder="exemplo@email.com") }}
+
+                {{ form.assunto.label() }}
+                {{ form.assunto(class="form-control", placeholder="Digite o Assunto") }}
+
+                {{ form.msg.label() }}
+                {{ form.msg(class="form-control", placeholder="Digite sua Mensagem", rows="9", style="resize: none;") }}
+
+                {{ form.btn_enviar(class="btn btn-primary col-5") }}
+            </form>
+    </div>
+    <a href="{{url_for('homepage')}}">Home page</a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
